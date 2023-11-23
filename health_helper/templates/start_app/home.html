@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Главная страница</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #50b3a2;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        header .highlight, header .current a {
+            color: #e8491d;
+            font-weight: bold;
+        }
+        header a:hover {
+            color: #ffffff;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            font-size: 18px;
+            color: #fff;
+            background: #e8491d;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .button:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Медицинское Приложение</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="/diabetes/">Диабет</a></li>
+                    <li><a href="/heart/">Сердечные Заболевания</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Добро пожаловать в наше приложение!</h1>
+        <p>С учетом высокой распространенности сахарного диабета (СД) и продолжающегося роста количества пациентов с СД в популяции, а также значительного увеличения частоты развития ишемической болезни сердца (ИБС) и сердечно-сосудистых  осложнений (ССО) у этих пациентов проблема ведения больных с сердечно-сосудистыми заболеваниями (ССЗ) на фоне СД является достаточно актуальной. Такие больные имеют общую, обычно комбинированную структуру факторов риска и отличаются крайне неблагоприятным прогнозом в плане развития макро- и микрососудистых осложнений, общей и сердечно-сосудистой смертности. В статье подчеркивается необходимость коррекции цифр артериального давления, медикаментозного влияния с целью предупреждения  микро- и макрососудистых осложнений. Немаловажным является устранение дислипидемических нарушений. Также актуально применение препаратов метаболического ряда. Одним из современных требований к терапии больных СД 2-го типа с сопутствующими заболеваниями сердечно-сосудистой системы является индивидуальный подход к выбору антиишемических, липидкорригирующих, антигипертензивных и сахароснижающих средств при обязательном использовании немедикаментозных вмешательств. Успешная профилактика ССО у таких больных возможна при высоком уровне сотрудничества между пациентом и врачом, т. к. жесткий контроль гликемии, уровня липидов крови и адекватная терапия артериальной гипертензии, ИБС приведут к значительному снижению частоты ССО у данных больных и позволят повысить их выживаемость.</p>
+        <p>Выберите один из разделов:</p>
+        <a href="/diabetes/" class="button">Диабет</a>
+        <a href="/heart/" class="button">Сердечные заболевания</a>
+    </div>
+</body>
+</html>
+
+
+

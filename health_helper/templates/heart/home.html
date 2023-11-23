@@ -1,8 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Диагностика Сердечных Заболеваний</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #4a76a8;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        button {
+            background: #4a76a8;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #3a5a78;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+        }
+    </style>
 </head>
 <body>
     <h1>Форма Для Диагностики Сердечных Заболеваний</h1>
@@ -13,11 +61,15 @@
     </form>
 
     {% if diagnosis %}
-        <h2>Результат: {{ diagnosis }}</h2>
+        <div class="result">
+            <h2>Результат: {{ diagnosis }}</h2>
+        </div>
     {% endif %}
 
     {% if accuracy %}
-        <h2>Точность модели: {{ accuracy|floatformat:2 }}%</h2>
+        <div class="result">
+            <h2>Точность модели: {{ accuracy|floatformat:2 }}%</h2>
+        </div>
     {% endif %}
 </body>
 </html>

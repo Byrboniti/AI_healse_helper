@@ -1,8 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Определение наличия диабета</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #6c757d;
+        }
+        form {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        button {
+            background: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e2e3e5;
+            border-left: 6px solid #6c757d;
+        }
+    </style>
 </head>
 <body>
     <h1>Определение наличия диабета</h1>
@@ -13,9 +61,13 @@
     </form>
 
     {% if diagnosis %}
-        <h2>Диагноз: {{ diagnosis }}</h2>
+        <div class="result">
+            <h2>Диагноз: {{ diagnosis }}</h2>
+        </div>
     {% endif %}
 
-    <h2>Точность модели: {{ accuracy }}%</h2>
+    <div class="result">
+        <h2>Точность модели: {{ accuracy }}%</h2>
+    </div>
 </body>
 </html>
