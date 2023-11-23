@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Определение наличия диабета</title>
+</head>
+<body>
+    <h1>Определение наличия диабета</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Предсказать</button>
+    </form>
+
+    {% if diagnosis %}
+        <h2>Диагноз: {{ diagnosis }}</h2>
+    {% endif %}
+
+    <h2>Точность модели: {{ accuracy }}%</h2>
+</body>
+</html>

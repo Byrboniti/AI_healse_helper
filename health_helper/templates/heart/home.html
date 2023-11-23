@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Диагностика Сердечных Заболеваний</title>
+</head>
+<body>
+    <h1>Форма Для Диагностики Сердечных Заболеваний</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+
+    {% if diagnosis %}
+        <h2>Результат: {{ diagnosis }}</h2>
+    {% endif %}
+
+    {% if accuracy %}
+        <h2>Точность модели: {{ accuracy|floatformat:2 }}%</h2>
+    {% endif %}
+</body>
+</html>
