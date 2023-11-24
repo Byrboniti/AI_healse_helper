@@ -1,14 +1,7 @@
-# views.py
-
-from django.http import JsonResponse
 import pandas as pd
-import joblib
-
-
 from django.shortcuts import render
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.impute import SimpleImputer
-
 from heart.forms import HeartForm
 from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
@@ -35,8 +28,6 @@ X = pd.DataFrame(X, columns=column_names)
 # Разделение данных на обучающую и тестовую выборки
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
 
-# Обучение модели
-# Импорты и подготовка данных...
 
 # Обучение модели и расчет точности
 heart_rf = RandomForestClassifier()
